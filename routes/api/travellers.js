@@ -43,6 +43,7 @@ router
         where: {
           id: req.params.id,
         },
+        include: [{ model: Trip }, { model: Location }],
       });
 
       if (!result) {
